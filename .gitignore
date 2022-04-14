@@ -1,3 +1,5 @@
+@eaDir
+
 node_modules
 
 /app.js
