@@ -1,4 +1,7 @@
 node_modules
-app.js
-index.html
-style.css
+package-lock.json
+
+/app.js
+/index.html
+/style.css
+
