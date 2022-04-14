@@ -12,4 +12,29 @@ const colors = ["#1abc9c", "#3498db", "#9b59b6", "#f39c12", "#e74c3c"];
 ✅ DO NOT CHANGE .css, or .html files.
 ✅ ALL function handlers should be INSIDE of "superEventHandler"
 */
-const superEventHandler = {};
+
+const title = document.querySelector("h2");
+
+const superEventHandler = {
+  mouseEnter: function () {
+    title.innerText = "The mouse is here!";
+    title.style.color = "#1abc9c";
+  },
+  mouseLeave: function () {
+    title.innerText = "The mouse is gone!";
+    title.style.color = "#3498db";
+  },
+  windowResize: function () {
+    title.innerText = "You just resized!";
+    title.style.color = "#9b59b6";
+  },
+  rightClick: function () {
+    title.innerText = "That was a right click!";
+    title.style.color = "#e74c3c";
+  },
+};
+
+title.addEventListener("mouseenter", superEventHandler.mouseEnter);
+title.addEventListener("mouseleave", superEventHandler.mouseLeave);
+window.addEventListener("resize", superEventHandler.windowResize);
+title.addEventListener("contextmenu", superEventHandler.rightClick);
