@@ -1,16 +1,18 @@
-const colors = ["#458dd5", "#8f4eae", "#eebc13"];
-
 function ResizeWidth() {
   if (window.innerWidth < 500) {
-    document.body.style.backgroundColor = colors[0];
+    document.body.classList.add("bg-color-sm");
+    document.body.classList.remove("bg-color-md");
+    document.body.classList.remove("bg-color-lg");
   } else if (window.innerWidth < 800) {
-    document.body.style.backgroundColor = colors[1];
+    document.body.classList.remove("bg-color-sm");
+    document.body.classList.add("bg-color-md");
+    document.body.classList.remove("bg-color-lg");
   } else {
-    document.body.style.backgroundColor = colors[2];
+    document.body.classList.remove("bg-color-sm");
+    document.body.classList.remove("bg-color-md");
+    document.body.classList.add("bg-color-lg");
   }
 }
-
-document.querySelector("h1").style.color = "white";
 
 ResizeWidth();
 window.addEventListener("resize", ResizeWidth);
