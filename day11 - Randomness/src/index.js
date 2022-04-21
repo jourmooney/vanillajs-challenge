@@ -16,5 +16,14 @@ const colors = [
   "#485460",
   "#ffa801",
   "#ffd32a",
-  "#ff3f34"
+  "#ff3f34",
 ];
+
+function onBtnClick() {
+  const color1 = colors[Math.floor(Math.random() * colors.length)];
+  const color2 = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.background = `linear-gradient(0.25turn, ${color1}, ${color2})`;
+}
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", onBtnClick);
